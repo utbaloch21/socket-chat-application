@@ -214,7 +214,7 @@ const Chat = ({
                 <p>{selectedUser?.username}</p>
               </div>
               <ul className="messagesList">
-                {selectedUser?.messages.map((value, index) => {
+                {selectedUser?.messages?.map((value, index) => {
                   return (
                     <li
                       key={index}
