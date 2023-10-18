@@ -65,6 +65,7 @@ const Chat = ({
         return a.username > b.username ? 1 : 0;
       });
       setUsers(allUsers);
+      setSelectedUser(users[0]);
     };
     const onUserConnect = (user: userDataType) => {
       for (let i = 0; i < users.length; i++) {
@@ -171,6 +172,7 @@ const Chat = ({
                     } `}
                     key={index}
                     onClick={() => {
+                      console.log("selecting");
                       setSelectedUser(value);
                       value.hasNewMessages = false;
                     }}
