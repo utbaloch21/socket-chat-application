@@ -1,5 +1,5 @@
 import socket from "@/socket";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { userDataType } from "../type";
 
 const Chat = ({
@@ -17,6 +17,8 @@ const Chat = ({
 }) => {
   const [content, setContent] = useState("");
   const [renderPage, setRenderPage] = useState(false);
+  const audio = new Audio("/audio/ting.mp3");
+
   const initReactiveProperties = (user: userDataType) => {
     user.hasNewMessages = false;
   };
@@ -136,6 +138,7 @@ const Chat = ({
           break;
         }
       }
+      audio.play();
       setRenderPage(!renderPage);
     };
 
