@@ -17,7 +17,6 @@ const Chat = ({
 }) => {
   const [content, setContent] = useState("");
   const [renderPage, setRenderPage] = useState(false);
-  const audio = new Audio("/audio/ting.mp3");
 
   const initReactiveProperties = (user: userDataType) => {
     user.hasNewMessages = false;
@@ -39,6 +38,7 @@ const Chat = ({
   };
 
   useEffect(() => {
+    const audio = new Audio("/audio/ting.mp3");
     const onUsersConnected = (allUsers: userDataType[]) => {
       allUsers.forEach((user) => {
         user.messages.forEach((message) => {

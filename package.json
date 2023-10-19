@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "engine.io-client": "^6.5.2",
     "next": "13.5.5",
     "react": "^18",
     "react-dom": "^18",
-    "socket.io-client": "^4.7.2"
+    "socket.io-client": "^4.7.2",
+    "ws": "^8.14.2"
   },
   "devDependencies": {
     "@types/node": "^20",
